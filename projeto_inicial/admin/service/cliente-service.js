@@ -36,4 +36,8 @@ const listaClientes = () => {
 }
 
 listaClientes()
-    .then(da
+    .then(data => {
+        data.forEach(elemento => {
+            tabela.appendChild(criaNovaLinha(elemento.nome, elemento.email))
+        })
+    })
